@@ -1,0 +1,19 @@
+.board {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+  max-width: $boardMaxWidth;
+  margin: 0 auto;
+
+  @media (max-width: $md1) {
+    margin: 0 10%;
+  }
+  @media (max-width: $md3) {
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+}

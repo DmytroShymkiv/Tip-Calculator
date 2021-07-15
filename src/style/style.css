@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.board {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .board {
+    margin: 0 10%;
+  }
+}
+
+@media (max-width: 700px) {
+  .board {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+}
+
+.result-board {
+  width: 50%;
+  background: #00494d;
+  border-radius: 1.25rem;
+  padding: 35px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .result-board {
+    width: 60%;
+  }
+}
+
+@media (max-width: 700px) {
+  .result-board {
+    width: 100%;
+  }
+}
+
+.result-board > div {
+  margin-bottom: 25px;
+}
+
+.result-board button {
+  margin-top: auto;
+  background: #26c0ab;
+  border-radius: 0.25rem;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  color: #00494d;
+  font-weight: 700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.result-board button:hover {
+  background: #c5e4e7;
+}
+
+.result-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.result-value h2 {
+  color: white;
+  font-weight: 400;
+}
+
+.result-value p {
+  margin-top: 7px;
+  color: #5e7a7d;
+}
+
+.result-value .result-amount {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #26c0ab;
+}
+
+.input-form {
+  width: 45%;
+}
+
+.input-form > div {
+  margin-bottom: 40px;
+}
+
+.input-form label {
+  color: #5e7a7d;
+  font-weight: 700;
+}
+
+.input-form input {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #00494d;
+  background: #f4fafa;
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input-form input::-webkit-outer-spin-button,
+.input-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1000px) {
+  .input-form {
+    width: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input-form {
+    width: 100%;
+  }
+}
+
+.tip-select-section {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tip-select-section div {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  background: #00494d;
+  border-radius: 0.5rem;
+  height: 50px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.tip-select-section div:hover {
+  background: #26c0ab;
+}
+
+@media (max-width: 1000px) {
+  .tip-select-section {
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.custom-tip-btn {
+  height: 50px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.custom-tip-btn::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #5e7a7d;
+}
+
+.custom-tip-btn:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #5e7a7d;
+}
+
+.custom-tip-btn::-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #5e7a7d;
+}
+
+.custom-tip-btn::placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #5e7a7d;
+}
+
+.custom-tip-btn:focus {
+  border: 3px solid #26c0ab;
+}
+
+.input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 10px;
+  background: #f4fafa;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+.input-wrapper:focus-within {
+  border: 3px solid #26c0ab;
+}
+
+.input {
+  text-align: right;
+}
+
+.input::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+.input:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+.input::-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+.input::placeholder {
+  font-weight: 700;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+body {
+  position: absolute;
+  min-height: 100%;
+  background: #c5e4e7;
+  font-family: "Space Mono", monospace;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #5e7a7d;
+  letter-spacing: 0.75rem;
+  margin-top: 7%;
+  margin-bottom: 3%;
+}

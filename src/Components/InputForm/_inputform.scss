@@ -1,0 +1,99 @@
+.input-form {
+  width: 45%;
+  > div {
+    margin-bottom: 40px;
+  }
+  label {
+    color: $darkGrayishCyan;
+    font-weight: 700;
+  }
+  input {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: $veryDarkCyan;
+    background: $lightGrayishCyanHover;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    text-align: right;
+    appearance: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+  @media (max-width: $md2) {
+    width: 35%;
+  }
+  @media (max-width: $md3) {
+    width: 100%;
+  }
+}
+
+.tip-select-section {
+  margin-top: 1rem;
+  display: grid;
+  gap: 15px;
+
+  grid-template-columns: repeat(3, 1fr);
+  div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: 700;
+    font-size: 20px;
+    background: $veryDarkCyan;
+    border-radius: 0.5rem;
+    height: 50px;
+    transition: all 0.5s;
+    &:hover {
+      background: $strongCyan;
+    }
+  }
+  @media (max-width: $md2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.custom-tip-btn {
+  height: 50px;
+  text-align: center;
+  padding: 0 1rem;
+  &::placeholder {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: $darkGrayishCyan;
+  }
+  &:focus {
+    border: 3px solid $strongCyan;
+  }
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-top: 10px;
+  background: $lightGrayishCyanHover;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  &:focus-within {
+    border: 3px solid $strongCyan;
+  }
+}
+
+.input {
+  text-align: right;
+  &::placeholder {
+    font-weight: 700;
+    font-size: 20px;
+    color: $darkGrayishCyanHover;
+  }
+}
